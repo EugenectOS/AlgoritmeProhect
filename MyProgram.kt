@@ -30,8 +30,7 @@ fun main() {
                                     "\t 2 - Проверка на равенство;\n" +
                                     "\t 3 - Бесконечное умножение чисел;\n" +
                                     "\t 4 - Число фибаначи\n" +
-                                    "\t 0 - Выйти с блока."
-                        )
+                                    "\t 0 - Выйти с блока.")
                         val userProgramM = readLine()!!.toInt()
                         if (userProgramM == 0) break
                         while (true) {
@@ -44,8 +43,7 @@ fun main() {
                             println(
                                 "Хотите выйти с этой программы?\n" +
                                         "Если да нажмите - 1\n" +
-                                        "Если нет нажмите - 2"
-                            )
+                                        "Если нет нажмите - 2")
                             val chiceuserProgramM = readLine()!!.toInt()
                             if (chiceuserProgramM == 1) break
                         }
@@ -64,8 +62,7 @@ fun main() {
                             "Введите число соответствующее программе:\n" +
                                     "\t 1 - Подсчет жителей города через 10 лет;\n" +
                                     "\t 2 - Подстчет жителей города через 10 лет с условием, что на 1 человек меньше рождается и умирает;\n" +
-                                    "\t 0 - Выйти с блока."
-                        )
+                                    "\t 0 - Выйти с блока.")
                         val userProgramXYZ = readLine()!!.toInt()
                         if (userProgramXYZ == 0) break
                         while (true) {
@@ -77,8 +74,7 @@ fun main() {
                             println(
                                 "Хотите выйти с этой программы?\n" +
                                         "Если да нажмите - 1\n" +
-                                        "Если нет нажмите - 2"
-                            )
+                                        "Если нет нажмите - 2")
                             val chiceuserProgramXYZ = readLine()!!.toInt()
                             if (chiceuserProgramXYZ == 1) break
                         }
@@ -97,8 +93,7 @@ fun main() {
                             "Введите число соответствующее программе:\n" +
                                     "\t 1 - Равнобедренный треугольник из 1;\n" +
                                     "\t 2 - Треугольник Паскаля;\n" +
-                                    "\t 0 - Выйти с блока."
-                        )
+                                    "\t 0 - Выйти с блока.")
                         val userProgramTriangle = readLine()!!.toInt()
                         if (userProgramTriangle == 0) break
                         while (true) {
@@ -109,8 +104,7 @@ fun main() {
                             println(
                                 "Хотите выйти с этой программы?\n" +
                                         "Если да нажмите - 1\n" +
-                                        "Если нет нажмите - 2"
-                            )
+                                        "Если нет нажмите - 2")
                             val chiceuserProgramTriangle = readLine()!!.toInt()
                             if (chiceuserProgramTriangle == 1) break
                         }
@@ -132,8 +126,7 @@ fun main() {
                                     "\t 4 - Вывод 3-х самых больших чисел массива;\n" +
                                     "\t 5 - Вывод первого и последнего элемента массива;\n" +
                                     "\t 6 - Колличество символов в строке;\n" +
-                                    "\t 0 - Выйти с блока."
-                        )
+                                    "\t 0 - Выйти с блока.")
                         val userProgramArray = readLine()!!.toInt()
                         if (userProgramArray == 0) break
                         while (true) {
@@ -148,8 +141,7 @@ fun main() {
                             println(
                                 "Хотите выйти с этой программы?\n" +
                                         "Если да нажмите - 1\n" +
-                                        "Если нет нажмите - 2"
-                            )
+                                        "Если нет нажмите - 2")
                             val chiceuserProgramArray = readLine()!!.toInt()
                             if (chiceuserProgramArray == 1) break
                         }
