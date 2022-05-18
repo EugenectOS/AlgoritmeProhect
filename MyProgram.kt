@@ -17,8 +17,7 @@ fun main() {
                         "\t10 - Блок программ с выводом \"arrayOf()\" четных элементов с условием до 237;\n" +
                         "\t11 - Блок программ с проверкой на уникальность числа в \"arraOf()\"\n" +
                         "\t12 - Блок программ с проверкой \"arrayOf()\" на повторение слова и на самое длинное\n" +
-                        "\t 0 - Завершить программу"
-            )
+                        "\t 0 - Завершить программу")
             val userBlokProgram = readLine()!!.toInt()
             if (userBlokProgram == 0) break
             if (userBlokProgram == 1) printBiography()
