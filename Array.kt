@@ -1,18 +1,18 @@
 package MyProjectForGitHub
 
 fun newArray(){
-    println("a = arrayOf(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)\n" +
-            "b = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)")
-    val a = arrayOf(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)
-    val b = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
-    var result = intArrayOf()
-    for (n in b){
-        if (n in a){
-            result += n // добавление данных в массив
+        println("a = arrayOf(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)\n" +
+                "b = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)")
+        val a = arrayOf(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)
+        val b = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+        var result = intArrayOf()
+        for (n in b){
+            if (n in a){
+                result += n // добавление данных в массив
+            }
         }
-    }
-    for (numbResuln in result) print("$numbResuln ")
-    println()
+        for (numbResuln in result) print("$numbResuln ")
+        println()
 }
 fun arraySortDescending(){
     println("a = arrayOf(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)\n" +
