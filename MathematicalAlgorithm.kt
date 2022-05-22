@@ -23,10 +23,10 @@ fun numberComparison(){
     if (numb1==numb2){
         println("$numb1=$numb2")
     }
-    else if (numb1>numb2){
+    if (numb1>numb2){
         println("$numb1>$numb2")
     }
-    else if (numb1<numb2){
+    if (numb1<numb2){
         println("$numb1<$numb2")
     }
     else {

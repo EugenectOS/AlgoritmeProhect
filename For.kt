@@ -36,7 +36,7 @@ fun bank7InTheMonth(){
     println("Сумма вклада бдет $numb")
 }
 fun forNumberMultiplication() {
-    for (totaln in 1..999) {
+    while (true) {
         println("Enter number")
         var numb1 = readLine()!!.toInt()
         println("Enter number")

@@ -24,7 +24,14 @@ fun main() {
             if (userBlokProgram == 1) {
                 while (true) {
                     try {
-                        printBiography()
+                        println("Введите Ваше имя, Ваш возраст, Ваш город, Вашу дату рождения формата 12.34.5678, Ваш рост.\n" +
+                                "После каждого ввода нажмите \"Enter\".")
+                        printBiography(
+                            myNema =  readLine()!!.toString(),
+                            myAge =  readLine()!!.toInt(),
+                            myCity =  readLine()!!.toString(),
+                           date_of_Birth =  readLine()!!.toString(),
+                            height =  readLine()!!.toFloat(),)
                         println(
                             "Хотите выйти с этой программы?\n" +
                                     "Если да нажмите - 1\n" +

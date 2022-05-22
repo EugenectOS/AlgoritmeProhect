@@ -1,12 +1,7 @@
 package MyProjectForGitHub
 
-fun printBiography (){
-    val myNema = "Eugene"
-    val myAge: Byte = 27
-    val City = "Mozdok"
-    val Date_of_Birth = "21.12.1994"
-    val Height: Float = 177.8F
-    println("\tMy name $myNema. To me $myAge age. I be born $Date_of_Birth.\n" +
-            "\tI resid in $City.\n" +
-            "\tMy height $Height")
+fun printBiography (myNema: String, myAge:, myCity: String,date_of_Birth: String, height: Float){
+    println("\tMy name $myNema. To me $myAge age. I be born $date_of_Birth.\n" +
+            "\tI resid in $myCity.\n" +
+            "\tMy height $height")
 }
