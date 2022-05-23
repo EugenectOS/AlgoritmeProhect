@@ -1,5 +1,7 @@
 package MyProjectForGitHub
 
+import ClassWork.number
+
 fun main() {
     while (true) {
         try {
@@ -24,14 +26,11 @@ fun main() {
             if (userBlokProgram == 1) {
                 while (true) {
                     try {
-                        println("Введите Ваше имя, Ваш возраст, Ваш город, Вашу дату рождения формата 12.34.5678, Ваш рост.\n" +
-                                "После каждого ввода нажмите \"Enter\".")
-                        printBiography(
-                            myNema =  readLine()!!.toString(),
-                            myAge =  readLine()!!.toInt(),
-                            myCity =  readLine()!!.toString(),
-                           date_of_Birth =  readLine()!!.toString(),
-                            height =  readLine()!!.toFloat(),)
+                        println(
+                            "Введите Ваше имя, Ваш возраст, Ваш город, Вашу дату рождения формата 12.34.5678, Ваш рост.\n" +
+                                    "После каждого ввода нажмите \"Enter\"."
+                        )
+                        printBiography()
                         println(
                             "Хотите выйти с этой программы?\n" +
                                     "Если да нажмите - 1\n" +
@@ -53,18 +52,81 @@ fun main() {
                             "Введите число соответствующее программе:\n" +
                                     "\t 1 - Простой калькулятор;\n" +
                                     "\t 2 - Проверка на равенство;\n" +
-                                    "\t 3 - Бесконечное умножение чисел;\n" +
-                                    "\t 4 - Число фибаначи\n" +
+                                    "\t 3 - Число фибаначи\n" +
                                     "\t 0 - Выйти с блока."
                         )
                         val userProgramM = readLine()!!.toInt()
                         if (userProgramM == 0) break
                         while (true) {
                             when (userProgramM) {
-                                1 -> printLiteCalculator()
-                                2 -> numberComparison()
-                                3 -> forNumberMultiplication()
-                                4 -> numberFibonacci()
+                                1 -> while (true) {
+                                    try {
+                                        println(
+                                            "Dear friend i will help you solve simple examples\n" +
+                                                    "enter number"
+                                        )
+                                        val number1 = readLine()!!.toInt()
+                                        println("Input element mathematic")
+                                        val elementMath = funElemebtMath(readln())
+                                        println("Enter another number")
+                                        val number2 = readLine()!!.toInt()
+                                        printLiteCalculator(number1, number2, elementMath)
+                                        println(
+                                            "Хотите выйти с этой программы?\n" +
+                                                    "Если да нажмите - 1\n" +
+                                                    "Если нет нажмите - 2"
+                                        )
+                                        val chiceuserProgramM = readLine()!!.toInt()
+                                        if (chiceuserProgramM == 1) break
+                                    } catch (n: NumberFormatException) {
+                                        println("Вы ввели не корректный тип данных. Пожалуйста введите число.")
+                                    } catch (a: ArithmeticException) {
+                                        println("Вы ввели не допустимое число. Введите число соответствующее блоку программ.")
+                                    } catch (e: Exception) {
+                                        println("Вы ввели не корректный тип данных. Пожалуйста введите корректный элемент.")
+                                    }
+                                }
+                                2 -> while (true) {
+                                    try {
+                                        println("Enter two a number to compare")
+                                        val number1 = readLine()!!.toInt()
+                                        val number2 = readLine()!!.toInt()
+                                        numberComparison(number1, number2)
+                                        println(
+                                            "Хотите выйти с этой программы?\n" +
+                                                    "Если да нажмите - 1\n" +
+                                                    "Если нет нажмите - 2"
+                                        )
+                                        val chiceuserProgramM = readLine()!!.toInt()
+                                        if (chiceuserProgramM == 1) break
+                                    } catch (n: NumberFormatException) {
+                                        println("Вы ввели не корректный тип данных. Пожалуйста введите число.")
+                                    } catch (a: ArithmeticException) {
+                                        println("Вы ввели не допустимое число. Введите число соответствующее блоку программ.")
+                                    } catch (e: Exception) {
+                                        println("Вы ввели не корректный тип данных. Пожалуйста введите корректный элемент.")
+                                    }
+                                }
+                                3 ->while (true){
+                                    try {
+                                        println("Enter number Fibonacci")
+                                        val numbF = readLine()!!.toInt()
+                                        println("Enter number long")
+                                        val long = readLine()!!.toInt()
+                                        numberFibonacci(numbF, long)
+                                        println(
+                                            "Хотите выйти с этой программы?\n" +
+                                                    "Если да нажмите - 1\n" +
+                                                    "Если нет нажмите - 2"
+                                        )
+                                        val chiceuserProgramM = readLine()!!.toInt()
+                                        if (chiceuserProgramM == 1) break
+                                    }catch (n: NumberFormatException) {
+                                        println("Вы ввели не корректный тип данных. Пожалуйста введите число.")
+                                    } catch (a: ArithmeticException) {
+                                        println("Вы ввели не допустимое число. Введите число соответствующее блоку программ.")
+                                    }
+                                }
                             }
                             println(
                                 "Хотите выйти с этой программы?\n" +
@@ -84,18 +146,29 @@ fun main() {
             if (userBlokProgram == 3) {
                 while (true) {
                     try {
-                        convectorTime()
+                        println(
+                            "Введите число cекунд. Я для Вас конвертирую это числов в формат:\n" +
+                                    "- Год\n" +
+                                    "- Месяц\n" +
+                                    "- Неделя\n" +
+                                    "- День\n" +
+                                    "- Час\n" +
+                                    "- Минута\n" +
+                                    "- Секунда\n"
+                        )
+                        var number1 = readLine()!!.toLong()
+                        convectorTime(number1)
                         println(
                             "Хотите выйти с этой программы?\n" +
                                     "Если да нажмите - 1\n" +
                                     "Если нет нажмите - 2"
                         )
-                        val chiceuserProgram = readLine()!!.toInt()
-                        if (chiceuserProgram == 1) break
+                        val chiceuserProgramM = readLine()!!.toInt()
+                        if (chiceuserProgramM == 1) break
                     } catch (n: NumberFormatException) {
                         println("Вы ввели не корректный тип данных. Пожалуйста введите число.")
-                    } catch (a: ArithmeticException) {
-                        println("Вы ввели не допустимое число. Введите число соответствующее блоку программ.")
+                    } catch (e: Exception) {
+                        println("Вы ввели не корректный тип данных. Пожалуйста введите корректный элемент.")
                     }
                 }
             }
@@ -219,9 +292,9 @@ fun main() {
                     }
                 }
             }
-            if (userBlokProgram == 8){
-                while (true){
-                    try{
+            if (userBlokProgram == 8) {
+                while (true) {
+                    try {
                         palindrom()
                         println(
                             "Хотите выйти с этой программы?\n" +
@@ -273,7 +346,7 @@ fun main() {
                     }
                 }
             }
-            if (userBlokProgram == 11){
+            if (userBlokProgram == 11) {
                 while (true) {
                     try {
                         distinctArra()
@@ -291,7 +364,7 @@ fun main() {
                     }
                 }
             }
-            if (userBlokProgram == 12){
+            if (userBlokProgram == 12) {
                 while (true) {
                     try {
                         arrayStringLongDub()
@@ -316,3 +389,5 @@ fun main() {
         }
     }
 }
+
+

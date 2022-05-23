@@ -1,54 +1,32 @@
 package MyProjectForGitHub
 
-fun printLiteCalculator(){
-    println("Dear friend i will help you solve simple examples\n" +
-            "enter number")
-    val number1  = readLine()!!.toInt()
-    println("Enter another number")
-    val number2 = readLine()!!.toInt()
-    val sum = number1 + number2
-    val subtraction = number1 - number2
-    val multiplication = number1 * number2
-    val difference = number1 / number2.toFloat()
-    println("$number1+$number2=$sum\n" +
-            "$number1-$number2=$subtraction\n" +
-            "$number1*$number2=$multiplication\n" +
-            "$number1/$number2=$difference")
+fun printLiteCalculator(number1: Int, number2: Int, elementMath: String){
+            when (elementMath) {
+                "+" -> println("$number1 + $number2 = ${number1 + number2}")
+                "-" -> println("$number1 - $number2 = ${number1 - number2}")
+                "*" -> println("$number1 * $number2 = ${number1 * number2}")
+                "/" -> println("$number1 / $number2 = ${number1 / number2}")
+            }
 }
-fun numberComparison(){
-    println("Enter two a number to compare")
-    val numb1 = readLine()!!.toInt()
-    val numb2 = readLine()!!.toInt()
-
-    if (numb1==numb2){
-        println("$numb1=$numb2")
+fun funElemebtMath(el: String): String {
+    val methematic = arrayOf('+','-','*','/')
+    for (i in el) {
+        if (i !in methematic) throw java.lang.Exception("Вы ввели некорректный тип данных, введите пожалуйста Имя")
     }
-    if (numb1>numb2){
-        println("$numb1>$numb2")
-    }
-    if (numb1<numb2){
-        println("$numb1<$numb2")
-    }
-    else {
-        println("No result")
+    return el
+}
+fun numberComparison(number1: Int, number2: Int){
+    when{
+        number1 == number2 -> println("$number1 = $number2")
+        number1 > number2 -> println("$number1 > $number2")
+        number1 < number2 -> println("$number1 < $number2")
+        else -> println("No result")
     }
 }
-fun convectorTime(){
-    println(
-        "Введите число cекунд. Я для Вас конвертирую это числов в формат:\n" +
-                "- Год\n" +
-                "- Месяц\n" +
-                "- Неделя\n" +
-                "- День\n" +
-                "- Час\n" +
-                "- Минута\n" +
-                "- Секунда\n"
-    )
-    var numb1 = readLine()!!.toLong()
-
-    val year = numb1 / 31536000
-    val modYear = numb1 % 31536000
-    val month = numb1 / 2628000
+fun convectorTime(number1: Long){
+    val year = number1 / 31536000
+    val modYear = number1 % 31536000
+    val month = number1 / 2628000
     val modMonth = modYear % 2628000
     val week = modMonth / 604800
     val modWeek = modMonth % 604800

@@ -35,7 +35,7 @@ fun bank7InTheMonth(){
     }
     println("Сумма вклада бдет $numb")
 }
-fun forNumberMultiplication() {
+fun forNumberMultiplication(number1: Long) {
     while (true) {
         println("Enter number")
         var numb1 = readLine()!!.toInt()
@@ -51,20 +51,18 @@ fun forNumberMultiplication() {
         if (result == 2) break
     }
 }
-fun numberFibonacci(){
-    println("Enter number Fibonacci")
-    var numbf = readLine()!!.toInt()
-    println("Enter number long")
-    var long = readLine()!!.toInt()
-    long -= 3
-    print("0, 1, $numbf, ")
-    numbf++
-    var total = numbf
-    numbf--
+fun numberFibonacci(numbF: Int, long: Int){
+    var funNumbF = numbF
+    var funLong = long
+    funLong -= 3
+    print("0, 1, $numbF, ")
+    funLong++
+    var total = funNumbF
+    funNumbF--
     for (fibn in 1..long){
         print("$total, ")
-        total += numbf
-        numbf = total - numbf
+        total += funNumbF
+        funNumbF = total - numbF
     }
 }
 fun triangleIsOne(){
