@@ -1,18 +1,24 @@
 package MyProjectForGitHub
 
+import ClassWork.number
+
 fun cityXYZVar10Yer(){
+    println("xyz = 10000000\n" +
+            "Численность населения")
     var xyz = 10000000
     for (xyzn in 1..10) {
         xyz += xyz * (14 - 8) / 1000
     }
-    println("��������� ������ ����� 10 ��� = $xyz")
+    println("Начеление города через 10 лет = $xyz")
 }
 fun cityXYZVar10YerMinusOne(){
+    println("xyz = 10000000\n" +
+            "Численность населения")
     var xyz = 10000000
     var b1 = 14
     var d1 = 8
     for (dn in 1..10){
-        xyz += xyz * (b1-d1) / 1000 // ����� ����� ���������� ����� if ��� �����
+        xyz += xyz * (b1-d1) / 1000 // какой ответ правильный перед if или после
         b1--
         if (b1 < 7){
             b1++
@@ -22,34 +28,16 @@ fun cityXYZVar10YerMinusOne(){
             d1++
         }
     }
-    println("��������� ������ ����� 10 ��� = $xyz")
+    println("Начеление города через 10 лет = $xyz\n" +
+            "С условем, что умирает на 1 человек меньше и рождаемость уменьшена на 1 человека.")
 }
-fun bank7InTheMonth(){
-    println("Enter sum money")
-    var numb = readln().toFloat()
-    println("Enter number of months ")
-    var month = readln().toInt()
-    numb += numb / 100 *7
+fun bank7InTheMonth(numb: Float, month: Int){
+    var number = numb
+    number += numb / 100 *7
     for (totaln in 1..month){
-        numb += (numb / 100 *7)
+        number += (numb / 100 *7)
     }
-    println("����� ������ ���� $numb")
-}
-fun forNumberMultiplication(number1: Long) {
-    while (true) {
-        println("Enter number")
-        var numb1 = readLine()!!.toInt()
-        println("Enter number")
-        var numb2 = readLine()!!.toInt()
-        println("Result multiplication = ${numb1 * numb2}")
-        println(
-            "Enter 1 to exit\n" +
-                    "Enter 2 to restart"
-        )
-        var result = readLine()!!.toInt()
-        if (result == 1) println("Goodbye")
-        if (result == 2) break
-    }
+    println("Сумма вклада бдет $numb")
 }
 fun numberFibonacci(numbF: Int, long: Int){
     var funNumbF = numbF
@@ -65,9 +53,8 @@ fun numberFibonacci(numbF: Int, long: Int){
         funNumbF = total - numbF
     }
 }
-fun triangleIsOne(){
-    println("Enter number for triangle")
-    var numbert = readLine()!!.toInt()
+fun triangleIsOne(i: Int){
+    var numbert = i
     var numb1 = 1
     for (n1 in 1..numbert){
         for (n2 in 1..numbert){
@@ -88,9 +75,7 @@ fun triangleIsOne(){
         println()
     }
 }
-fun trianglePasskalya(){
-    println("Enter number for triangle")
-    var n = readLine()!!.toLong()
+fun trianglePasskalya(n: Long){
     var nDop = 1L
     var m = 1L
     var subtraction: Long

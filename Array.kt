@@ -92,7 +92,9 @@ fun palindrom(){
 fun stringToArray(){
     val enterUserInt = readLine()
     val arr = enterUserInt?.split(",") //преобразует строку в массив с уточнением, чем будет разделяться
-    println(arr)
+    if (arr != null) {
+        arr.forEach(){i -> print("$i ")}
+    }
 }
 fun firstArrayLast(){
     val a = arrayOf(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)

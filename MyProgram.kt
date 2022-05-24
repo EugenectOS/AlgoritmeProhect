@@ -28,7 +28,7 @@ fun main() {
                     try {
                         println(
                             "Введите Ваше имя, Ваш возраст, Ваш город, Вашу дату рождения формата 12.34.5678, Ваш рост.\n" +
-                                    "После каждого ввода нажмите \"Enter\"."
+                            "После каждого ввода нажмите \"Enter\"."
                         )
                         printBiography()
                         println(
@@ -207,7 +207,11 @@ fun main() {
             if (userBlokProgram == 5) {
                 while (true) {
                     try {
-                        bank7InTheMonth()
+                        println("Enter sum money")
+                        var numb = readln().toFloat()
+                        println("Enter number of months ")
+                        var month = readln().toInt()
+                        bank7InTheMonth(numb, month)
                         println(
                             "Хотите выйти с этой программы?\n" +
                                     "Если да нажмите - 1\n" +
@@ -235,8 +239,42 @@ fun main() {
                         if (userProgramTriangle == 0) break
                         while (true) {
                             when (userProgramTriangle) {
-                                1 -> triangleIsOne()
-                                2 -> trianglePasskalya()
+                                1 -> while (true){
+                                    try {
+                                        println("Enter number for triangle")
+                                        var numbert = readLine()!!.toInt()
+                                        triangleIsOne(numbert)
+                                        println(
+                                            "Хотите выйти с этой программы?\n" +
+                                                    "Если да нажмите - 1\n" +
+                                                    "Если нет нажмите - 2"
+                                        )
+                                        val chiceuserProgramXYZ = readLine()!!.toInt()
+                                        if (chiceuserProgramXYZ == 1) break
+                                    }catch (n: NumberFormatException) {
+                                        println("Вы ввели не корректный тип данных. Пожалуйста введите число.")
+                                    } catch (a: ArithmeticException) {
+                                        println("Вы ввели не допустимое число. Введите число соответствующее блоку программ.")
+                                    }
+                                }
+                                2 ->while (true){
+                                    try {
+                                        println("Enter number for triangle")
+                                        var n = readLine()!!.toLong()
+                                        trianglePasskalya(n)
+                                        println(
+                                            "Хотите выйти с этой программы?\n" +
+                                                    "Если да нажмите - 1\n" +
+                                                    "Если нет нажмите - 2"
+                                        )
+                                        val chiceuserProgramXYZ = readLine()!!.toInt()
+                                        if (chiceuserProgramXYZ == 1) break
+                                    }catch (n: NumberFormatException) {
+                                        println("Вы ввели не корректный тип данных. Пожалуйста введите число.")
+                                    } catch (a: ArithmeticException) {
+                                        println("Вы ввели не допустимое число. Введите число соответствующее блоку программ.")
+                                    }
+                                }
                             }
                             println(
                                 "Хотите выйти с этой программы?\n" +
